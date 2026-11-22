@@ -154,7 +154,7 @@
 #     return object
 
 # name = get_input("costumer name")
-# product = get_input("priduct")
+# product = get_input("priduct").upper()
 # price = int(get_input("product price"))
 # quantity = int(get_input("quantity"))
 # total = price * quantity
@@ -170,4 +170,8 @@
 # total: {with_discount}
 # vat: {vat}
 # vat amount : {total* discount / 100 /100 * vat}
-# with vat: {with_discount + (with_discount /100 * vat)}""")
+# with vat: {with_discount + (with_discount /100 * vat)}
+# ============================
+#    TANK YOU FOR SHOPPING
+# ============================
+# """)
