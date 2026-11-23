@@ -196,17 +196,17 @@ import random
 #         print(i)
 
 #25
-# row =  int(input("enyer a number of rows "))
-# collum =  int(input("enyer a number of soluum "))
+row =  int(input("enyer a number of rows "))
+collum =  int(input("enyer a number of soluum "))
 
-# for i in range(row):
-#     for j in range(collum):
-#         print("*",end="")
-#     print()
+for i in range(row):
+    for j in range(collum):
+        print("*",end="")
+    print()
 
 #26
 # for i in range(1,7):
-#     for j in range(i):
+#     for j in range(i):                                                                
 #         print("*",end="")
 #     print()
 
