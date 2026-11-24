@@ -133,7 +133,12 @@
 
 #23
 # def calculate_power(num,p):
-#     return num ** p
+#     total =1
+#     for i in range(p):
+#         total *= num
+#     return total
+
+# print(calculate_power(2,3))
 #24
 # def print_list(lll):
 #     for l in lll:
@@ -298,124 +303,124 @@
 # print(a)
 
 #project
-students = [    {"name": "David", "age": 20, "grade": 90},    {"name": "Moshe", "age": 22, "grade": 75},    {"name": "Dana", "age": 21, "grade": 100},    {"name": "Noa", "age": 19, "grade": 55},    {"name": "Avi", "age": 23, "grade": 82}]
+# students = [    {"name": "David", "age": 20, "grade": 90},    {"name": "Moshe", "age": 22, "grade": 75},    {"name": "Dana", "age": 21, "grade": 100},    {"name": "Noa", "age": 19, "grade": 55},    {"name": "Avi", "age": 23, "grade": 82}]
 
 
-def show_menu():
-    print("""===== Student Management =====
+# def show_menu():
+#     print("""===== Student Management =====
     
-1. Show all students
-2. Add student
-3. Search student
-4. Update student grade
-5. Remove student
-6. Show passing students
-7. Show class statistics
-8. Show students above average
-0. Exit
-    """)
-    return
+# 1. Show all students
+# 2. Add student
+# 3. Search student
+# 4. Update student grade
+# 5. Remove student
+# 6. Show passing students
+# 7. Show class statistics
+# 8. Show students above average
+# 0. Exit
+#     """)
+#     return
 
-def show_all_students():
-    for student in students:
-        print(student["name"]," ",student["age"]," ",student["grade"])
+# def show_all_students():
+#     for student in students:
+#         print(student["name"]," ",student["age"]," ",student["grade"])
 
-def add_student(name,age,grade):
-    if search_students(name):
-        new = {"name":name,"age":age,"grade":grade}
-        students.append(new)
-        return
-    return
+# def add_student(name,age,grade):
+#     if search_students(name):
+#         new = {"name":name,"age":age,"grade":grade}
+#         students.append(new)
+#         return
+#     return
 
-def search_students(name):
-    for student in students:
-        if student["name"] == name:
-            return student
-    print("not found")
-    return
+# def search_students(name):
+#     for student in students:
+#         if student["name"] == name:
+#             return student
+#     print("not found")
+#     return
 
-def updrde_grade(name,grade):
-    for student in students:
-        if student["name"] == name:
-            student["grade"] == grade
-            print("grade updated")
-            return
-    print("not found")
-    return
+# def updrde_grade(name,grade):
+#     for student in students:
+#         if student["name"] == name:
+#             student["grade"] == grade
+#             print("grade updated")
+#             return
+#     print("not found")
+#     return
 
-def remove_student(name):
-    for student in students:
-        if student["name"] == name:
-            students.remove(student)
-            print("student removed")
-            return
-    print("not found")
-    return
+# def remove_student(name):
+#     for student in students:
+#         if student["name"] == name:
+#             students.remove(student)
+#             print("student removed")
+#             return
+#     print("not found")
+#     return
 
-def get_passing_students():
-    passed = [n["name"] for n in students if n["grade"] > 60]
-    return passed
+# def get_passing_students():
+#     passed = [n["name"] for n in students if n["grade"] > 60]
+#     return passed
 
-def get_average():
-    summ = 0
-    for n in students:
-        summ += n["grade"]
-    return summ / len(students)
+# def get_average():
+#     summ = 0
+#     for n in students:
+#         summ += n["grade"]
+#     return summ / len(students)
 
-def get_heighest_grade():
-    maxx =0
-    for n in students:
-        if n["grade"] > maxx:
-            maxx = n["grade"]
-    return maxx
+# def get_heighest_grade():
+#     maxx =0
+#     for n in students:
+#         if n["grade"] > maxx:
+#             maxx = n["grade"]
+#     return maxx
 
-def show_statistics():
-    print(f"""passing students: {get_passing_students()}
-average: {get_average()}
-highest grade: {get_heighest_grade()}""")
-    return
+# def show_statistics():
+#     print(f"""passing students: {get_passing_students()}
+# average: {get_average()}
+# highest grade: {get_heighest_grade()}""")
+#     return
 
-def above_average():
-    above = []
-    avg = get_average()
-    for n in students:
-        if n["grade"] > avg:
-            above.append(n["name"])
-    return above
+# def above_average():
+#     above = []
+#     avg = get_average()
+#     for n in students:
+#         if n["grade"] > avg:
+#             above.append(n["name"])
+#     return above
 
-flag = True
-while flag:
-    show_menu()
-    pick = input("enter a number: ")
-    if pick == "1":
-        show_all_students()
-    if pick == "2":
-        name = input("enter name: ")
-        age  = int(input("enter age: "))
-        grade = int(input("enter grdae: "))
-        add_student(name,age,grade)
+# flag = True
+# while flag:
+#     show_menu()
+#     pick = input("enter a number: ")
+#     if pick == "1":
+#         show_all_students()
+#     if pick == "2":
+#         name = input("enter name: ")
+#         age  = int(input("enter age: "))
+#         grade = int(input("enter grdae: "))
+#         add_student(name,age,grade)
 
-    if pick == "3":
-        name = input("enter name: ")
-        print(search_students(name))
+#     if pick == "3":
+#         name = input("enter name: ")
+#         print(search_students(name))
 
-    if pick =="4":
-        name = input("enter name: ")
-        grade = int(input("enter grade: "))
-        updrde_grade(name,grade)
+#     if pick =="4":
+#         name = input("enter name: ")
+#         grade = int(input("enter grade: "))
+#         updrde_grade(name,grade)
 
-    if pick == "5":
-        name = input("enter name: ")
-        remove_student(name)
+#     if pick == "5":
+#         name = input("enter name: ")
+#         remove_student(name)
 
-    if pick == "6":
-        print(*get_passing_students())
+#     if pick == "6":
+#         print(*get_passing_students())
 
-    if pick == "7":
-        show_statistics()
+#     if pick == "7":
+#         show_statistics()
 
-    if pick == "8":
-        print(*above_average())
-    if pick == 0:
-        flag = False
+#     if pick == "8":
+#         print(*above_average())
+#     if pick == 0:
+#         flag = False
 
